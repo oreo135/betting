@@ -1,0 +1,70 @@
+# Режим «белый список»: игнорируется ВСЁ, явно разрешены только три проекта,
+# ops/ и README. Данные, venv, доноры (cs_edge, betting), отчёты (_reports),
+# INVENTORY.md, _recon_odds, корневой CLAUDE.md — не в git.
+/*
+!/.gitignore
+!/README.md
+!/ops/
+!/parcer_cs/
+!/cs_service/
+!/kf_betting/
+
+# parcer_cs: только код, тесты, контекст, инструкция, зависимости
+/parcer_cs/*
+!/parcer_cs/src/
+!/parcer_cs/tools/
+!/parcer_cs/tests/
+!/parcer_cs/examples/
+!/parcer_cs/_context/
+!/parcer_cs/CLAUDE.md
+!/parcer_cs/requirements.txt
+!/parcer_cs/main.py
+
+# cs_service: то же
+/cs_service/*
+!/cs_service/src/
+!/cs_service/tools/
+!/cs_service/tests/
+!/cs_service/examples/
+!/cs_service/_context/
+!/cs_service/CLAUDE.md
+!/cs_service/requirements.txt
+
+# kf_betting: код коллектора, точка входа, конфиг, документы
+/kf_betting/*
+!/kf_betting/fetcher/
+!/kf_betting/parser/
+!/kf_betting/storage/
+!/kf_betting/signals/
+!/kf_betting/paper_trading/
+!/kf_betting/analysis/
+!/kf_betting/config.py
+!/kf_betting/main.py
+!/kf_betting/*.md
+!/kf_betting/docs/
+!/kf_betting/requirements.txt
+
+# Внутри разрешённого — всё равно вон: данные, окружения, байткод, дампы, дневники, IDE
+data/
+logs/
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.db*
+*.sqlite*
+*.log
+*.html
+*.bak*
+*.json
+vault/
+.claude/
+.obsidian/
+.vscode/
+.idea/
+.env*
+guard*.json
+*_preflight.json
+
+# Исключения из *.json: фикстуры тестов (не данные и не секреты)
+!/cs_service/tests/fixtures/*.json

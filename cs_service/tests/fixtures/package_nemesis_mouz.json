@@ -1,0 +1,178 @@
+{
+  "_note": "ФИКСТУРА. Срезы lineup_map_stats и весь map_sidebias взяты БЕЗ ИЗМЕНЕНИЙ из корпуса парсера (cs_analytics.db, окно 2026-06-15..2026-09-15): это настоящие цифры настоящих пятёрок Nemesis и MOUZ на Ancient. Выдуманы только вето и подписи команд ('nemesis'/'mouz' вместо HLTV team_id) — они нужны, чтобы показать три случая сразу: Ancient = данные по обеим командам, Dust2 и Nuke = данных нет, работает усадка к m_map.",
+  "match": {
+    "match_id": 0,
+    "team1": "Nemesis",
+    "team2": "MOUZ",
+    "team1_id": "nemesis",
+    "team2_id": "mouz",
+    "event_id": null,
+    "event_name": "фикстура ДВ-1",
+    "bo": 3,
+    "scheduled_unix": null,
+    "stage": null
+  },
+  "veto": [
+    {
+      "step": 1,
+      "team": "Nemesis",
+      "action": "ban",
+      "map": "Anubis"
+    },
+    {
+      "step": 2,
+      "team": "MOUZ",
+      "action": "ban",
+      "map": "Mirage"
+    },
+    {
+      "step": 3,
+      "team": "Nemesis",
+      "action": "pick",
+      "map": "Ancient"
+    },
+    {
+      "step": 4,
+      "team": "MOUZ",
+      "action": "pick",
+      "map": "Nuke"
+    },
+    {
+      "step": 5,
+      "team": "Nemesis",
+      "action": "ban",
+      "map": "Train"
+    },
+    {
+      "step": 6,
+      "team": "MOUZ",
+      "action": "ban",
+      "map": "Overpass"
+    },
+    {
+      "step": 7,
+      "team": null,
+      "action": "leftover",
+      "map": "Dust2"
+    }
+  ],
+  "rosters": {
+    "nemesis": [
+      18670,
+      20709,
+      22536,
+      22930,
+      23047
+    ],
+    "mouz": [
+      18072,
+      18221,
+      20312,
+      22279,
+      24457
+    ]
+  },
+  "maps": [
+    {
+      "map": "Ancient",
+      "map_id": 47,
+      "role": "pick",
+      "picked_by": "Nemesis",
+      "sidebias": {
+        "map": "Ancient",
+        "map_id": 47,
+        "ct_pct": 0.518,
+        "t_pct": 0.482,
+        "as_of": "2026-09-15 21:35:05"
+      },
+      "lineups": {
+        "nemesis": {
+          "map_id": 47,
+          "lineup_hash": "18670-20709-22536-22930-23047",
+          "player_ids": "[18670,20709,22536,22930,23047]",
+          "date_from": "2026-06-15",
+          "date_to": "2026-09-15",
+          "map_name": "Ancient",
+          "wr_ct": 0.563,
+          "wr_t": 0.488,
+          "wr_overall": 0.556,
+          "times_played": 18,
+          "total_rounds": 375,
+          "pistol_wr": 0.611,
+          "fk_conv": 0.696,
+          "fd_conv": 0.31,
+          "as_of": "2026-09-15 14:19:11"
+        },
+        "mouz": {
+          "map_id": 47,
+          "lineup_hash": "18072-18221-20312-22279-24457",
+          "player_ids": "[18221,24457,20312,22279,18072]",
+          "date_from": "2026-06-15",
+          "date_to": "2026-09-15",
+          "map_name": "Ancient",
+          "wr_ct": 0.422,
+          "wr_t": 0.514,
+          "wr_overall": 0.333,
+          "times_played": 9,
+          "total_rounds": 190,
+          "pistol_wr": 0.333,
+          "fk_conv": 0.697,
+          "fd_conv": 0.248,
+          "as_of": "2026-09-15 14:19:11"
+        }
+      },
+      "team_stats": {
+        "nemesis": null,
+        "mouz": null
+      }
+    },
+    {
+      "map": "Nuke",
+      "map_id": 34,
+      "role": "pick",
+      "picked_by": "MOUZ",
+      "sidebias": {
+        "map": "Nuke",
+        "map_id": 34,
+        "ct_pct": 0.546,
+        "t_pct": 0.454,
+        "as_of": "2026-09-15 21:35:05"
+      },
+      "lineups": {
+        "nemesis": null,
+        "mouz": null
+      },
+      "team_stats": {
+        "nemesis": null,
+        "mouz": null
+      }
+    },
+    {
+      "map": "Dust2",
+      "map_id": 31,
+      "role": "leftover",
+      "picked_by": null,
+      "sidebias": {
+        "map": "Dust2",
+        "map_id": 31,
+        "ct_pct": 0.492,
+        "t_pct": 0.508,
+        "as_of": "2026-09-15 21:35:05"
+      },
+      "lineups": {
+        "nemesis": null,
+        "mouz": null
+      },
+      "team_stats": {
+        "nemesis": null,
+        "mouz": null
+      }
+    }
+  ],
+  "window": [
+    "2026-06-15",
+    "2026-09-15"
+  ],
+  "warnings": [],
+  "source": "fixture (реальные срезы из cs_analytics.db)"
+}
